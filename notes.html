@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Desktop - Multi-File Editor</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+    <!--  MAIN CONTAINER  -->
+    <div id="container">
+        <!-- LEFT PANEL: File List -->
+        <div id="filePanel">
+            <div id="fileHeader">
+                <!-- Title of the panel -->
+                <h2>Files</h2>
+
+                <!-- Container for Add Button and Dark/Light Toggle -->
+                <div id="headerControls">
+                    <!-- Add file button -->
+                    <button id="addFileBtn">+</button>
+
+                    <!-- Dark/Light Mode Toggle Switch -->
+                    <label class="switch">
+                        <input type="checkbox" id="modeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- UL container where files will be dynamically listed -->
+            <ul id="fileList"></ul>
+        </div>
+
+        <!-- RIGHT PANEL: Text Editor -->
+        <div id="editorPanel">
+            <!-- Editable textarea -->
+            <textarea id="TxtFile" placeholder=""></textarea>
+
+            <!-- Placeholder shown when no file is selected -->
+            <div id="placeholder">Create or select a file</div>
+        </div>
+    </div>
+
+    <!--  MODAL  -->
+    <div id="modal" class="hidden">
+        <div id="modalContent">
+            <!-- Modal title -->
+            <h3 id="modalTitle"></h3>
+
+            <!-- Input for add/rename actions -->
+            <input type="text" id="modalInput" />
+
+            <!-- Modal action buttons -->
+            <div id="modalBtns">
+                <button id="modalCancel">Cancel</button>
+                <button id="modalOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="notes.js" defer></script>
+</body>
+</html>
